@@ -1,6 +1,6 @@
 ## Basic Configuration
 
-baseurl = "https://srashwan.github.io/"
+baseurl = "https://srashwan.github.io/nouracv"
 builddrafts = false
 canonifyurls = false
 languageCode = "en-US"
@@ -36,13 +36,9 @@ keywords = "minimalist,blog,goa,hugo,developer"
 ## Social Accounts
 [params.social]
 
-instagram = "<username>"
-linkedin = "<username>"
-twitter = "<username>"
-facebook = "<username>"
-snapchat = "<username>"
-telegram = "<username>"
-whatsapp = "<username>"
+instagram = "noura_elwardany"
+twitter = "@nouraahmed071"
+facebook = "noura.elhameed"
 email = "nora.ahm832@gmail.com"
 
 
