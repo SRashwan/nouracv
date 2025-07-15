@@ -10,4 +10,4 @@ title = "CV"
 showpagemeta = false
 +++
 
-{{< embed-pdf url="../nouracv.pdf" hidePaginator="true" >}}
+{{< embed-pdf url="https://srashwan.github.io/nouracv/nouracv.pdf" hidePaginator="true" >}}
