@@ -13,7 +13,7 @@
         <meta name="keywords" content="minimalist,blog,goa,hugo,developer">
 
         <title>
-              Noura Ahmed - About 
+              KAREEMA AHMED - CV 
         </title>
 
         <meta name="generator" content="Hugo 0.133.1">
@@ -41,7 +41,7 @@
         <div class="container my-auto">
 
 <header class="text-start title">
-  <h1 class="title">About</h1>
+  <h1 class="title">CV</h1>
 </header>
 
 <section id="category-pane" class="meta">
@@ -51,9 +51,254 @@
 <section id="content-pane">
   <div class="text-justify content">
     
-    <p>Panjim Goa is a visionary leader in the tech industry, known for his innovative approach and dynamic leadership at GoaTech, a leading tech startup. With a background in both technology and business, Panjim has been instrumental in driving the company&rsquo;s growth and success. His journey began with a modest startup in the scenic city of Goa, where his unique ideas and relentless pursuit of excellence set him apart.</p>
-<p>Panjim&rsquo;s philosophy revolves around sustainable and innovative tech solutions that address real-world problems. Under his guidance, GoaTech has developed groundbreaking products that have made a significant impact in the tech world. Despite his achievements, he remains grounded and continues to mentor young tech enthusiasts, fostering a culture of innovation and creativity.</p>
-<p>In his free time, Panjim is an avid reader and enjoys exploring the latest advancements in technology. He&rsquo;s a regular speaker at tech conferences, sharing his insights and experiences to inspire the next generation of tech entrepreneurs. With his forward-thinking vision and dedication, Panjim Goa has become a respected figure in the technology community.</p>
+    <script type="text/javascript" src= '/js/pdf-js/build/pdf.js'></script>
+
+<style>
+  #embed-pdf-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 20vh;
+     
+  }
+  
+  .pdf-canvas {
+    border: 1px solid black;
+    direction: ltr;
+    width: 100%;
+    height: auto;
+    display: none;
+  }
+  
+  #the-canvas {
+    border: 1px solid black;
+    direction: ltr;
+    width: 100%;
+    height: auto;
+    display: none;
+  }
+  
+  
+  .pdf-loadingWrapper {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+  }
+  
+  .pdf-loading {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #d2d0d0;;
+    border-radius: 50%;
+    border-top-color: #383838;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+  }
+  
+  
+  
+  
+  
+  #overlayText {
+    word-wrap: break-word;
+    display: grid;
+    justify-content: end;
+  }
+  
+  #overlayText a {
+    position: relative;
+    top: 10px;
+    right: 4px;
+    color: #000;
+    margin: auto;
+    background-color: #eeeeee;
+    padding: 0.3em 1em;
+    border: solid 2px;
+    border-radius: 12px;
+    border-color: #00000030;
+    text-decoration: none;
+  }
+  
+  #overlayText svg {
+    height: clamp(1em, 2vw, 1.4em);
+    width:  clamp(1em, 2vw, 1.4em);
+  }
+  
+  
+  
+  @keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+  @-webkit-keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+  </style><div class="embed-pdf-container" id="embed-pdf-container-adf6207d">
+    <div class="pdf-loadingWrapper" id="pdf-loadingWrapper-adf6207d">
+        <div class="pdf-loading" id="pdf-loading-adf6207d"></div>
+    </div>
+    <div id="overlayText">
+      <a href="../nouracv.pdf" aria-label="Download" download>
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+            <path d="M9 13c.3 0 .5-.1.7-.3L15.4 7 14 5.6l-4 4V1H8v8.6l-4-4L2.6 7l5.7 5.7c.2.2.4.3.7.3zm-7 2h14v2H2z" />
+        </svg>
+      </a>
+    </div>
+    <canvas class="pdf-canvas" id="pdf-canvas-adf6207d"></canvas>
+</div>
+
+<div class="pdf-paginator" id="pdf-paginator-adf6207d">
+    <button id="pdf-prev-adf6207d">Previous</button>
+    <button id="pdf-next-adf6207d">Next</button> &nbsp; &nbsp;
+    <span>
+      <span class="pdf-pagenum" id="pdf-pagenum-adf6207d"></span> / <span class="pdf-pagecount" id="pdf-pagecount-adf6207d"></span>
+    </span>
+    <a class="pdf-source" id="pdf-source-adf6207d" href="../nouracv.pdf">[pdf]</a>
+</div>
+
+<noscript>
+View the PDF file <a class="pdf-source" id="pdf-source-noscript-adf6207d" href="../nouracv.pdf">here</a>.
+</noscript>
+
+<script type="text/javascript">
+    (function(){
+    var url = '..\/nouracv.pdf';
+
+    var hidePaginator = "true" === "true";
+    var hideLoader = "" === "true";
+    var selectedPageNum = parseInt("") || 1;
+
+    
+    var pdfjsLib = window['pdfjs-dist/build/pdf'];
+
+    
+    if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+      pdfjsLib.GlobalWorkerOptions.workerSrc = "http:\/\/localhost:1313\/" + 'js/pdf-js/build/pdf.worker.js';
+
+    
+    var pdfDoc = null,
+        pageNum = selectedPageNum,
+        pageRendering = false,
+        pageNumPending = null,
+        scale = 3,
+        canvas = document.getElementById('pdf-canvas-adf6207d'),
+        ctx = canvas.getContext('2d'),
+        paginator = document.getElementById("pdf-paginator-adf6207d"),
+        loadingWrapper = document.getElementById('pdf-loadingWrapper-adf6207d');
+
+
+    
+    showPaginator();
+    showLoader();
+
+    
+
+    function renderPage(num) {
+      pageRendering = true;
+      
+      pdfDoc.getPage(num).then(function(page) {
+        var viewport = page.getViewport({scale: scale});
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        
+        var renderContext = {
+          canvasContext: ctx,
+          viewport: viewport
+        };
+        var renderTask = page.render(renderContext);
+
+        
+        renderTask.promise.then(function() {
+          pageRendering = false;
+          showContent();
+
+          if (pageNumPending !== null) {
+            
+            renderPage(pageNumPending);
+            pageNumPending = null;
+          }
+        });
+      });
+
+      
+      document.getElementById('pdf-pagenum-adf6207d').textContent = num;
+    }
+
+    
+
+    function showContent() {
+      loadingWrapper.style.display = 'none';
+      canvas.style.display = 'block';
+    }
+
+    
+
+    function showLoader() {
+      if(hideLoader) return
+      loadingWrapper.style.display = 'flex';
+      canvas.style.display = 'none';
+    }
+
+    
+
+    function showPaginator() {
+      if(hidePaginator) return
+      paginator.style.display = 'block';
+    }
+
+    
+
+    function queueRenderPage(num) {
+      if (pageRendering) {
+        pageNumPending = num;
+      } else {
+        renderPage(num);
+      }
+    }
+
+    
+
+    function onPrevPage() {
+      if (pageNum <= 1) {
+        return;
+      }
+      pageNum--;
+      queueRenderPage(pageNum);
+    }
+    document.getElementById('pdf-prev-adf6207d').addEventListener('click', onPrevPage);
+
+    
+
+    function onNextPage() {
+      if (pageNum >= pdfDoc.numPages) {
+        return;
+      }
+      pageNum++;
+      queueRenderPage(pageNum);
+    }
+    document.getElementById('pdf-next-adf6207d').addEventListener('click', onNextPage);
+
+    
+
+    pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+      pdfDoc = pdfDoc_;
+      var numPages = pdfDoc.numPages;
+      document.getElementById('pdf-pagecount-adf6207d').textContent = numPages;
+
+      
+      if(pageNum > numPages) {
+        pageNum = numPages
+      }
+
+      
+      renderPage(pageNum);
+    });
+    })();
+</script>
+
 
   </div>
 </section>

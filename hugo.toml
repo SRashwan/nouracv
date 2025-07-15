@@ -9,10 +9,11 @@ contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
 
-author = "Noura Ahmed"
-title = "Noura Ahmed"
+author = "KAREEMA AHMED"
+title = "KAREEMA AHMED"
 
-theme = "hugo-goa"
+theme = ["hugo-embed-pdf-shortcode", "hugo-goa"]
+enableInlineShortcodes = true
 
 ## Hugo Built-in Features
 # disqusShortname = "discusShortname" # Enable if you want to use Disqus
@@ -21,10 +22,10 @@ enableRobotsTXT = true
 
 ## Site Settings
 [params]
-author = "Noura Ahmed"
+author = "KAREEMA AHMED"
 intro = "Radio and TV Department - Mass Communication"
 description = "Leading the charge at [Incircle Media](https://incirclemedia.com)"
-authorimage = "noura1.jpg"
+authorimage = "noura2-ai3.png"
 dateformat = "Jan 2, 2006"
 
 ## Site Meta Settings
@@ -42,7 +43,7 @@ facebook = "<username>"
 snapchat = "<username>"
 telegram = "<username>"
 whatsapp = "<username>"
-email = "you@example.com"
+email = "nora.ahm832@gmail.com"
 
 
 ## Extras
@@ -61,7 +62,7 @@ displayrssicon = false
 ##identifier = "posts"
 ##url = "posts/"
 [[menu.main]]
-name = "about"
+name = "CV"
 identifier = "about"
 weight = 200
 url = "about/"
